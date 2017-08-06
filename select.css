@@ -1,0 +1,68 @@
+/* https://internetingishard.com/html-and-css/css-selectors/ */
+
+.page {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.synopsis {
+    color: #7e8184;
+    font-style: italic;
+}
+
+.button {
+    color: #fff;
+    background-color: #5995da;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5d6063;
+    border-radius: 5px;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.call-to-action {
+    font-style: italic;
+    background-color: #eeb75a;
+}
+
+.synopsis em {
+    font-style: normal;
+}
+ /* EXAMPLE:   
+ this affects only em elements INSIDE of h1 elements. 
+h1 em {
+    color: blue;
+}
+EXAMPLE: 
+ Try to avoid nesting too much: 
+.article h2 .subheading em {
+    color: blue;
+}
+*/
+
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+a:visited {
+  color: purple;
+}
+a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+}
+/* ====== TWO PSEUDO CLASSES TOGETHER: ========= */
+a:visited:hover {
+    color: orange;
+}
+
+a:visited:active {
+    color: red;
+}
+
+
