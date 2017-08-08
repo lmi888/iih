@@ -1,0 +1,50 @@
+/* https://internetingishard.com/html-and-css/advanced-positioning/ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1200px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.example {
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+  margin: 50px 0;
+  background-color: #d6e9fe;
+  border: 1px solid blue;
+}
+
+.item img {
+  display: block;
+}
+/* relative means 30 x 30px from it's original position on the page. No other items on the page move. It will sit on top of other elements*/
+.item-relative {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+/* This is the parent to .item-absolute
+/* if we change .item-absolute’s parent element to be relatively positioned, it should appear in the top-left corner of that element instead of the browser window. */
+.absolute {
+  position: relative;
+  border: 1px solid red;
+}
+
+/* Absolute positioning means the offset is relative to the ENTIRE BROWSER WINDOW instead of the original position of the element.*/
+/* after changing it's parent element to relative, .item-absolute is now positioned relative to it's PARENT, not the browser window */
+.item-absolute {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
