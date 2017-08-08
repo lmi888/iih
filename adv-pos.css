@@ -42,7 +42,7 @@ body {
 }
 
 /* Absolute positioning means the offset is relative to the ENTIRE BROWSER WINDOW instead of the original position of the element.*/
-/* after changing it's parent element to relative, .item-absolute is now positioned relative to it's PARENT, not the browser window */
+/* after changing it's parent element to relative, .item-absolute is now positioned relative to it's PARENT, not the browser window. Coordinates for absolute elements are always relative to the CLOSEST CONTAINER that is a positioned element. */
 .item-absolute {
   position: absolute;
   top: 10px;
