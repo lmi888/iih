@@ -1,0 +1,58 @@
+<!-- https://internetingishard.com/html-and-css/semantic-html/ -->
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Semantic HTML</title>
+  </head>
+  <body>
+
+    <!-- It denotes introductory content for a section, article, or entire web page. “Introductory content” can be anything from your company’s logo to navigational aids or author information. -->
+<header>
+    <h1>Interneting Is Easy!</h1>
+    <nav>
+    <ul>
+      <li><a href='#'>Home</a></li>
+      <li><a href='#'>About</a></li>
+      <li><a href='#'>Blog</a></li>
+      <li><a href='#'>Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- The <article> element represents an independent article in a web page. It should only wrap content that can be plucked out of your page and distributed in a completely different context. it’s perfectly legal to have more than one <article> element per page. A good example is a page that displays a bunch of blog posts. Each one of them can be wrapped in a separate set of <article> tags-->
+<article>
+  <header>
+<h1>Semantic HTML</h1>
+<p>By Troy McClure. Published January 3rd</p>
+</header>
+<p>This is an example web page explaining HTML5 semantic markup.</p>
+
+<h2>The Document Outline</h2>
+<p>HTML5 includes several “sectioning content” elements that
+   affect the document outline.</p>
+
+   <!-- each <section> can have its own set of <h1> through <h6> headings.  always define a page’s outline via heading levels, using <section> only as a replacement for container <div>’s when appropriate. -->
+<section>
+<h3>Headers</h3>
+<p>The <code>&lt;header&gt;</code> element is one such sectioning
+   element.</p>
+
+<h3>Footers</h3>
+<p>And so is the <code>&lt;footer&gt;</code> element.</p>
+</section>
+<section>
+<h6>Inline Semantic HTML</h6>
+<p>The <code>&lt;time&gt;</code> element is semantic, but it’s not
+   sectioning content.</p>
+</section>
+<footer>
+<p>This fake article was written by somebody at InternetingIsHard.com, which
+   is a pretty decent place to learn how to become a web developer.</p>
+</footer>
+</article>
+<footer>
+<p>&copy; 2017 InternetingIsHard.com</p>
+</footer>
+  </body>
+</html>
