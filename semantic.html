@@ -24,8 +24,13 @@
 <article>
   <header>
 <h1>Semantic HTML</h1>
-<p>By Troy McClure. Published January 3rd</p>
+<!-- The time itself is in 24-hour format, and the -0800 is the time zone offset from GMT (in this case, -0800 represents Pacific Standard Time). -->
+<!-- It defines contact information for the author of the article or web page in question. <address> should not be used for arbitrary physical addresses. -->
+<p>By <a href='mailto:troymcclure@example.com'>Troy McClure</a>. Published <time datetime='2017-1-3 15:00-0800'>January 3rd</time></p>
 </header>
+  <aside class='advert'>
+    <img src='some-advert-image.png'/>
+  </aside>
 <p>This is an example web page explaining HTML5 semantic markup.</p>
 
 <h2>The Document Outline</h2>
@@ -51,6 +56,29 @@
    is a pretty decent place to learn how to become a web developer.</p>
 </footer>
 </article>
+<!-- When used outside an <article>, an <aside> is associated with the page as a whole (much like <header> and <footer>). This makes it a good choice for marking up a site-wide sidebar. -->
+<aside class='sidebar'>
+  <h2>Sidebar</h2>
+  <p>Some sidebar content</p>
+  <nav>
+    <h3>HTML &amp; CSS Tutorial</h3>
+    <ul>
+      <li><a href='#'>Introduction</a></li>
+      <li><a href='#'>Basic Web Pages</a></li>
+      <li><a href='#'>etc...</a></li>
+    </ul>
+  </nav>
+  <nav>
+    <h3>JavaScript Tutorial</h3>
+    <ul>
+      <li><a href='#'>Introduction</a></li>
+      <li><a href='#'>Hello, JavaScript</a></li>
+      <li><a href='#'>etc...</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
 <footer>
 <p>&copy; 2017 InternetingIsHard.com</p>
 </footer>
