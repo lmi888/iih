@@ -10,11 +10,38 @@
 <body>
   <div class='page'>
     <div class='section menu'></div>
-    <div class='section header'>
-      <img src='images/header.svg'/>
-    </div>
+<div class='section header'>
+  <div class='photo'>
+    <!-- The 2000w tells the browser that the photo-big.jpg file is 2000 pixels wide. Likewise, the 1000w means photo-small.jpg has a width of 1000 pixels. If you’re wondering about that w character, it’s a special unit used only for this kind of image optimization scenario. -->
+    <!-- when the screen is at least 960px wide, the image will also be 960 pixels wide. Otherwise, the 100vw default value tells the browser that the image’s width will be 100% of the “viewport width”
+    <img src='images/photo-small.jpg'
+         srcset='images/photo-big.jpg 2000w,
+                 images/photo-small.jpg 1000w'
+         sizes='(min-width: 960px) 960px,
+                100vw'/>
+  </div>
+</div>
+-->
+
+<picture>
+      <source media='(min-width: 401px)'
+              srcset='images/photo-big.jpg'/>
+      <source media='(max-width: 400px)'
+              srcset='images/photo-tall.jpg'/>
+      <img src='images/photo-small.jpg'/>
+    </picture>
+  </div>
+</div>
+
     <div class='section content'>
-      <img src='images/content.svg'/>
+      <!-- This is one of the rare times an inline style is acceptable, due to the fact that it’s describing an innate property of the image. -->
+      <!-- The 1x tells the browser to display illustration-small.png on standard-resolution screens. The 2x means that illustration-big.png is for retina screens. Older browsers that don’t understand srcset fall back to the src attribute. -->
+<div class='illustration'>
+  <img src='illustration-small.png'
+       srcset='images/illustration-small.png 1x,
+               images/illustration-big.png 2x'
+       style='max-width: 500px'/>
+</div>
     </div>
     <div class='section sign-up'>
       <img src='images/sign-up.svg'/>
